@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 
 def calculate(arg):
-    pass
+    stack = list()
+    for token in arg.split():
+        try:
+            value = int(token)
+            stack.append(value)
+        except ValueError:
+            arg1 = stack.pop()
+            arg2 = stack.pop()
+            return arg1 + arg2
+
+    #print(stack)
 #pass is a no operation 
 
 def main():
     while True:
-            calculate(input('rpn calc> '))
+            print(calculate(input('rpn calc> ')))
 
 #this code is module runner. It makes the module executable
 # __ -> dunder name is a specail variable
