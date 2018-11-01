@@ -6,10 +6,18 @@ def calculate(arg):
         try:
             value = int(token)
             stack.append(value)
+        
         except ValueError:
             arg1 = stack.pop()
             arg2 = stack.pop()
-            return arg1 + arg2
+            if token == '+':
+                return arg1 + arg2
+            elif token == '-':
+                return arg1 - arg2
+            elif token == '*':
+                return arg1 * arg2
+            else:
+                return arg1 / arg2
 
     #print(stack)
 #pass is a no operation 
