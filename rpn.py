@@ -13,11 +13,11 @@ def calculate(arg):
             if token == '+':
                 return arg1 + arg2
             elif token == '-':
-                return arg1 - arg2
+                return arg2 - arg1
             elif token == '*':
-                return arg1 * arg2
+                return arg2 * arg1
             else:
-                return arg1 / arg2
+                return arg2 / arg1
 
     #print(stack)
 #pass is a no operation 
